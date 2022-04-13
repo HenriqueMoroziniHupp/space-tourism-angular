@@ -1,0 +1,13 @@
+.template {
+  height: 100%;
+  display: grid;
+  grid-template-rows: max-content auto;
+  .nav-bar {
+    margin-left: 4rem;
+  }
+  .container {
+    display: grid;
+    place-items: center;
+
+  }
+}

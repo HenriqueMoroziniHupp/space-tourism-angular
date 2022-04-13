@@ -1,0 +1,13 @@
+.organism-nav-bar{
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-template-columns: max-content 2fr 3fr;
+  .row {
+    position: relative;
+    border-color: var(--gray);
+    width: 100%;
+    left: 10%;
+    z-index: 1;   
+  }
+}

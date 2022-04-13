@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+.nav-bar {
+  background-color: rgba($color: #FFFFFF, $alpha: 0.1);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  list-style-type: none;
+}
+
+.nav-item {
+  color: red;
+}

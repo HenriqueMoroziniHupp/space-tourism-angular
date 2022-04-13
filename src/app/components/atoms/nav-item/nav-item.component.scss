@@ -1,0 +1,15 @@
+.nav-item {
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  padding-bottom: 30px;
+}
+
+.nav-item:hover {
+  // color: red;
+  border-bottom: 3px var(--soft-gray) solid;
+}
+.nav-item:active {
+  // color: red;
+  border-bottom: 3px var(--white) solid;
+}

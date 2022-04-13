@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+
+* {
+  margin: 0;
+}
+
+:root {
+  --dark-blue: #0b0d17;
+  --soft-lilac: #d0d6f9;
+  --white: #ffffff;
+  --gray: #616476;
+  --soft-gray: #979797;
+  --shadow: #24262F;
+}
+
+body,html {
+  // width: 100vw;
+  height: 100vh;
+  display: grid;
+  // overflow: hidden;
+  // align-items: center;
+  // justify-content: center;
+  // font-family: "Barlow Condensed", sans-serif;
+  font-family: "Bellefair", serif;
+  background-image: url(./assets/home/background-home-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: cover;
+  color: white;
+}
