@@ -1,0 +1,14 @@
+.destination {
+  display: grid;
+  grid-template-columns: 445px 445px;
+  align-items: stretch;
+  gap:10rem;
+
+  presentation-planet {
+    display: grid;
+    gap: 2rem;
+    align-self: end;
+    height: max-content;
+
+  }
+}

@@ -6,13 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./desktop-template.component.scss'],
 })
 export class DesktopTemplateComponent implements OnInit {
+  localPage: any = '';
 
-  localPage: any = ''
-
-  onLoadPage = () => {
-    this.localPage = localStorage.getItem('onPage');
-    console.log(this.localPage);
-  };
+  onLoadPage = () => (this.localPage = localStorage.getItem('onPage'));
 
   constructor() {}
 

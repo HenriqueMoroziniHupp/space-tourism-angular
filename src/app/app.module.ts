@@ -12,6 +12,12 @@ import { DesktopTemplateComponent } from './components/templates/desktop-templat
 import { HomeContentComponent } from './components/organisms/home-content/home-content.component';
 import { PresentationPlanetComponent } from './components/molecules/presentation-planet/presentation-planet.component';
 import { NavPlanetComponent } from './components/molecules/nav-planet/nav-planet.component';
+import { DestinationContentComponent } from './components/organisms/destination-content/destination-content.component';
+import { InfoPageComponent } from './components/atoms/info-page/info-page.component';
+import { PresentationCrewComponent } from './components/molecules/presentation-crew/presentation-crew.component';
+import { CrewContentComponent } from './components/organisms/crew-content/crew-content.component';
+import { NavCrewComponent } from './components/molecules/nav-crew/nav-crew.component';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +31,11 @@ import { NavPlanetComponent } from './components/molecules/nav-planet/nav-planet
     HomeContentComponent,
     PresentationPlanetComponent,
     NavPlanetComponent,
+    DestinationContentComponent,
+    InfoPageComponent,
+    PresentationCrewComponent,
+    CrewContentComponent,
+    NavCrewComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +52,11 @@ import { NavPlanetComponent } from './components/molecules/nav-planet/nav-planet
     DesktopTemplateComponent,
     HomeContentComponent,
     PresentationPlanetComponent,
-    NavPlanetComponent
+    NavPlanetComponent,
+    InfoPageComponent,
+    PresentationCrewComponent,
+    CrewContentComponent,
+    NavCrewComponent
   ]
 })
 export class AppModule { }

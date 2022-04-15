@@ -1,22 +1,21 @@
-<ul class="nav-bar">
+<ul class="nav-bar" (click)="onSavePage()">
   <li>
-    <nav-item (click)="page = 'home'" (click)="onSavePage()" class="nav-item" [number]="'00'" [text]="'HOME'">
+    <nav-item (click)="page = 'home'" class="nav-item" [number]="'00'" [text]="'HOME'">
     </nav-item>
   </li>
 
   <li>
-    <nav-item (click)="page = 'destino'" (click)="onSavePage()" class="nav-item" [number]="'01'" [text]="'DESTINATION'">
+    <nav-item (click)="page = 'destination'" class="nav-item" [number]="'01'" [text]="'DESTINATION'">
     </nav-item>
   </li>
 
   <li>
-    <nav-item (click)="page = 'equipe'" (click)="onSavePage()" class="nav-item" [number]="'02'" [text]="'CREW'">
+    <nav-item (click)="page = 'crew'" class="nav-item" [number]="'02'" [text]="'CREW'">
     </nav-item>
   </li>
 
   <li>
-    <nav-item (click)="page = 'tecnologia'" (click)="onSavePage()" class="nav-item" [number]="'03'"
-      [text]="'TECHNOLOGY'">
+    <nav-item (click)="page = 'technology'" class="nav-item" [number]="'03'" [text]="'TECHNOLOGY'">
     </nav-item>
   </li>
 </ul>

@@ -1,10 +1,12 @@
 <div class="template">
-  
+
   <organism-nav-bar class="nav-bar" (click)="onLoadPage()"></organism-nav-bar>
 
 
-  <div class="container">
-    <home-content></home-content>
+  <div class="container" [ngSwitch]="localPage">
+    <home-content *ngSwitchDefault></home-content>
+    <destination-content *ngSwitchCase="'destination'"></destination-content>
+    <crew-content *ngSwitchCase="'crew'"></crew-content>
 
     <!-- <div class="destination"></div> -->
     <!-- <div class="crew"></div> -->

@@ -1,0 +1,40 @@
+
+  .info {
+    display: grid;
+    // grid-template-columns: 445px;
+    .planet-name {
+      font-family: "Bellefair", serif;
+      font-weight: 400;
+      font-size: 100px;
+      color: var(--white);
+    }
+    .description {
+      font-family: "Barlow Regular", sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--soft-lilac);
+    }
+    hr {
+      border-color: var(--gray);
+      margin-top: 3rem;
+    }
+  }
+  
+  .statistic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    // grid-template-rows: max-content max-content;
+    .sub-title {
+      font-family: "Barlow Condensed", sans-serif;
+      color: var(--soft-lilac);
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+    .sub-info {
+      font-family: "Bellefair", serif;
+      font-size: 28px;
+      color: var(--white);
+    }
+  }
+  

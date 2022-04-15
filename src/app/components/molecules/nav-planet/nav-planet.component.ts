@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-nav-planet',
+  selector: 'nav-planet',
   templateUrl: './nav-planet.component.html',
-  styleUrls: ['./nav-planet.component.scss']
+  styleUrls: ['./nav-planet.component.scss'],
 })
 export class NavPlanetComponent implements OnInit {
+  planet: string = '';
 
-  constructor() { }
+  onSavePlanet = () => localStorage.setItem('onPlanet', this.planet);
+
+  constructor() {}
 
   ngOnInit(): void {
+    this.planet = 'moon';
+    this.onSavePlanet();
   }
-
 }

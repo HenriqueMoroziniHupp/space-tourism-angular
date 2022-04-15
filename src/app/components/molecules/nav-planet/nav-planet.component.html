@@ -1,1 +1,14 @@
-<p>nav-planet works!</p>
+<ul class="nav-planet" (click)="onSavePlanet()">
+  <li>
+    <nav-item (click)="planet = 'moon'" [text]="'MOON'"></nav-item>
+  </li>
+  <li>
+    <nav-item (click)="planet = 'mars'" [text]="'MARS'"></nav-item>
+  </li>
+  <li>
+    <nav-item (click)="planet = 'europa'" [text]="'EUROPA'"></nav-item>
+  </li>
+  <li>
+    <nav-item (click)="planet = 'titan'" [text]="'TITAN'"></nav-item>
+  </li>
+</ul>

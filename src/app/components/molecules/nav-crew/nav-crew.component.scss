@@ -1,0 +1,21 @@
+.nav-crew {
+  display: grid;
+  grid-auto-flow: column;
+  padding: 1rem;
+}
+li {
+  list-style-type: none;
+  .dot {
+    width: 15px;
+    height: 15px;
+    background-color: var(--gray);
+    border-radius: 50%;
+    transition: all 0.15s ease;
+  }
+  .dot:hover {
+    background-color: var(--white);
+  }
+  .dor:active {
+    background-color: var(--white);
+  }
+}
