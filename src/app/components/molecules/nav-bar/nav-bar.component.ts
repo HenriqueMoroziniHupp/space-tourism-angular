@@ -1,23 +1,21 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
+import { ObservableNavService } from 'src/app/observable-nav.service';
 @Component({
   selector: 'nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+  styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent implements OnInit {
+  pageObservable: string = 'home';
 
-  page: string = '';
-
-  onSavePage = () => {
-    localStorage.setItem('onPage', this.page);
+  constructor(private observableService: ObservableNavService) {
+    this.observableService.getPage().subscribe((newPage) => {
+      this.pageObservable = newPage;
+    });
   }
 
-  constructor() {}
-  
-  ngOnInit(): void {
-    this.page = 'home'
-    this.onSavePage();
-  }
+  setObservablePage = (page: string) => this.observableService.setPage(page);
 
+  ngOnInit(): void {}
 }

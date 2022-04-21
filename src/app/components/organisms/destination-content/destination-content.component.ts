@@ -1,27 +1,26 @@
 import { Component, OnInit, Output } from '@angular/core';
 
+import { ObservableNavService } from 'src/app/observable-nav.service';
+
 @Component({
   selector: 'destination-content',
   templateUrl: './destination-content.component.html',
   styleUrls: ['./destination-content.component.scss'],
 })
 export class DestinationContentComponent implements OnInit {
-  planet: any = 'moon';
+  planetObservable: any = 'moon';
   link: string = '';
 
-  makeLink = () => this.link = `/assets/destination/image-${this.planet}.webp`;
+  makeLink = () =>
+    (this.link = `/assets/destination/image-${this.planetObservable}.webp`);
 
-  onLoadPlanet = () => {
-    this.planet = localStorage.getItem('onPlanet');
-    this.makeLink();
-    console.log(this.link)
-  };
-
-
-  constructor() {}
+  constructor(private observableService: ObservableNavService) {
+    this.observableService.getPlanet().subscribe((newPlanet) => {
+      this.planetObservable = newPlanet;
+    });
+  }
 
   ngOnInit(): void {
     this.makeLink();
-    
   }
 }

@@ -1,0 +1,14 @@
+.crew-content {
+  display: grid;
+  // grid-template-columns: 614px 300px;
+  grid-auto-flow: column;
+
+  .presentation { 
+    display: grid;
+    
+  }
+
+  img {
+    width: 90%;
+  }
+}

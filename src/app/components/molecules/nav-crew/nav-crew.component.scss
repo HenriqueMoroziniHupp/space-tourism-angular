@@ -2,6 +2,7 @@
   display: grid;
   grid-auto-flow: column;
   padding: 1rem;
+  justify-content: start;
 }
 li {
   list-style-type: none;

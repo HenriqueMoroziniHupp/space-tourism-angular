@@ -2,13 +2,18 @@
   display: grid;
   grid-template-columns: 445px 445px;
   align-items: stretch;
-  gap:10rem;
-
-  presentation-planet {
+  gap: 10rem;
+  .side {
+    display: grid;
+    img {
+      width: 92%;
+      justify-self: center;
+    }
+  }
+  .presentation-content {
     display: grid;
     gap: 2rem;
     align-self: end;
     height: max-content;
-
   }
 }

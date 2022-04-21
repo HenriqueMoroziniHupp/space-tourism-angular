@@ -1,16 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ObservableNavService } from 'src/app/observable-nav.service';
+
 @Component({
   selector: 'desktop-template',
   templateUrl: './desktop-template.component.html',
   styleUrls: ['./desktop-template.component.scss'],
 })
 export class DesktopTemplateComponent implements OnInit {
-  localPage: any = '';
+  localPage: string = '';
 
-  onLoadPage = () => (this.localPage = localStorage.getItem('onPage'));
+  constructor(private observableService: ObservableNavService) {
+    this.observableService.getPage().subscribe((newPage) => {
+      this.localPage = newPage;
+    });
+  }
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.localPage = 'home';
+  }
 }

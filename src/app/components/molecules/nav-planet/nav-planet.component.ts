@@ -1,19 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ObservableNavService } from 'src/app/observable-nav.service';
+
 @Component({
   selector: 'nav-planet',
   templateUrl: './nav-planet.component.html',
   styleUrls: ['./nav-planet.component.scss'],
 })
 export class NavPlanetComponent implements OnInit {
-  planet: string = '';
+  planetObservable: string = 'europa';
 
-  onSavePlanet = () => localStorage.setItem('onPlanet', this.planet);
+  constructor(private observableService: ObservableNavService) {
+    this.observableService.getPlanet().subscribe((newPlanet) => {
+      this.planetObservable = newPlanet;
+    });
+  }
 
-  constructor() {}
+  setObservablePlanet = (planet: string) => {
+    this.observableService.setPlanet(planet);
+  };
 
   ngOnInit(): void {
-    this.planet = 'moon';
-    this.onSavePlanet();
+    this.planetObservable =  'europa'
   }
 }

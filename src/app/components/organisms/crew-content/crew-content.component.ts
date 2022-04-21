@@ -1,16 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ObservableNavService } from 'src/app/observable-nav.service';
+
 @Component({
   selector: 'crew-content',
   templateUrl: './crew-content.component.html',
   styleUrls: ['./crew-content.component.scss'],
 })
 export class CrewContentComponent implements OnInit {
-  localCrew: any = '';
+  crewObservable: string = 'douglas-hurley';
+  link: string = '';
 
-  onLoadCrew = () => (this.localCrew = localStorage.getItem('onCrew'));
+  constructor(private observableService: ObservableNavService) {
+    this.observableService.getCrew().subscribe((newCrew) => {
+      this.crewObservable = newCrew;
+    });
+  }
 
-  constructor() {}
+  makeLink = () =>
+    (this.link = `/assets/crew/image-${this.crewObservable}.webp`);
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.makeLink();
+  }
 }
