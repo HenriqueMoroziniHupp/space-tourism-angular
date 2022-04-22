@@ -9,13 +9,13 @@ import { ObservableNavService } from 'src/app/observable-nav.service';
 export class NavBarComponent implements OnInit {
   pageObservable: string = 'home';
 
-  constructor(private observableService: ObservableNavService) {
+  constructor(private observableService: ObservableNavService) {}
+
+  setObservablePage = (page: string) => this.observableService.setPage(page);
+
+  ngOnInit(): void {
     this.observableService.getPage().subscribe((newPage) => {
       this.pageObservable = newPage;
     });
   }
-
-  setObservablePage = (page: string) => this.observableService.setPage(page);
-
-  ngOnInit(): void {}
 }

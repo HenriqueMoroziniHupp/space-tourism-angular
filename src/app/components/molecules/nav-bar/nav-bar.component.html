@@ -1,21 +1,21 @@
 <ul class="nav-bar" (click)="setObservablePage(pageObservable)">
   <li>
-    <nav-item (click)="pageObservable = 'home'" class="nav-item" [number]="'00'" [text]="'HOME'">
+    <nav-item (click)="pageObservable = 'home'" class="nav-item" [router]="''"  [number]="'00'" [text]="'HOME'">
     </nav-item>
   </li>
 
   <li>
-    <nav-item (click)="pageObservable = 'destination'" class="nav-item" [number]="'01'" [text]="'DESTINATION'">
+    <nav-item (click)="pageObservable = 'destination'" class="nav-item" [router]="'destination'"  [number]="'01'" [text]="'DESTINATION'">
     </nav-item>
   </li>
 
   <li>
-    <nav-item (click)="pageObservable = 'crew'" class="nav-item" [number]="'02'" [text]="'CREW'">
+    <nav-item (click)="pageObservable = 'crew'" class="nav-item" [router]="'crew'"  [number]="'02'" [text]="'CREW'">
     </nav-item>
   </li>
 
   <li>
-    <nav-item (click)="pageObservable = 'technology'" class="nav-item" [number]="'03'" [text]="'TECHNOLOGY'">
+    <nav-item (click)="pageObservable = 'technology'" class="nav-item" [router]="'technology'"  [number]="'03'" [text]="'TECHNOLOGY'">
     </nav-item>
   </li>
 </ul>

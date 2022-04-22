@@ -10,13 +10,13 @@ import { ObservableNavService } from 'src/app/observable-nav.service';
 export class NavCrewComponent implements OnInit {
   crewObservable: string = '';
 
-  constructor(private observableService: ObservableNavService) {
+  constructor(private observableService: ObservableNavService) { }
+
+  setObservableCrew = (crew: string) => this.observableService.setCrew(crew);
+
+  ngOnInit(): void {
     this.observableService.getCrew().subscribe((newCrew) => {
       this.crewObservable = newCrew;
     });
   }
-
-  setObservableCrew = (crew: string) => this.observableService.setCrew(crew);
-
-  ngOnInit(): void {}
 }

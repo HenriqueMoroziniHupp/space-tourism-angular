@@ -8,19 +8,17 @@ import { ObservableNavService } from 'src/app/observable-nav.service';
   styleUrls: ['./nav-planet.component.scss'],
 })
 export class NavPlanetComponent implements OnInit {
-  planetObservable: string = 'europa';
+  planetObservable: string = '';
 
-  constructor(private observableService: ObservableNavService) {
-    this.observableService.getPlanet().subscribe((newPlanet) => {
-      this.planetObservable = newPlanet;
-    });
-  }
+  constructor(private observableService: ObservableNavService) { }
 
   setObservablePlanet = (planet: string) => {
     this.observableService.setPlanet(planet);
   };
 
   ngOnInit(): void {
-    this.planetObservable =  'europa'
+    this.observableService.getPlanet().subscribe((newPlanet) => {
+      this.planetObservable = newPlanet;
+    });
   }
 }

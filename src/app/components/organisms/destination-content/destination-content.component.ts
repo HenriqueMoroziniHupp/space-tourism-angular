@@ -14,13 +14,12 @@ export class DestinationContentComponent implements OnInit {
   makeLink = () =>
     (this.link = `/assets/destination/image-${this.planetObservable}.webp`);
 
-  constructor(private observableService: ObservableNavService) {
+  constructor(private observableService: ObservableNavService) { }
+
+  ngOnInit(): void {
     this.observableService.getPlanet().subscribe((newPlanet) => {
       this.planetObservable = newPlanet;
     });
-  }
-
-  ngOnInit(): void {
     this.makeLink();
   }
 }

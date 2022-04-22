@@ -11,16 +11,15 @@ export class CrewContentComponent implements OnInit {
   crewObservable: string = 'douglas-hurley';
   link: string = '';
 
-  constructor(private observableService: ObservableNavService) {
-    this.observableService.getCrew().subscribe((newCrew) => {
-      this.crewObservable = newCrew;
-    });
-  }
+  constructor(private observableService: ObservableNavService) {}
 
   makeLink = () =>
     (this.link = `/assets/crew/image-${this.crewObservable}.webp`);
 
   ngOnInit(): void {
+    this.observableService.getCrew().subscribe((newCrew) => {
+      this.crewObservable = newCrew;
+    });
     this.makeLink();
   }
 }
