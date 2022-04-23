@@ -1,14 +1,14 @@
 <ul class="nav-planet" (click)="setObservablePlanet(planetObservable)">
   <li>
-    <nav-item (click)="planetObservable = 'moon'" [text]="'MOON'"></nav-item>
+    <nav-item (click)="planetObservable = 'moon'" [router]="'moon'" [text]="'MOON'"></nav-item>
   </li>
   <li>
-    <nav-item (click)="planetObservable = 'mars'" [text]="'MARS'"></nav-item>
+    <nav-item (click)="planetObservable = 'mars'" [router]="'mars'" [text]="'MARS'"></nav-item>
   </li>
   <li>
-    <nav-item (click)="planetObservable = 'europa'" [text]="'EUROPA'"></nav-item>
+    <nav-item (click)="planetObservable = 'europa'" [router]="'europa'" [text]="'EUROPA'"></nav-item>
   </li>
   <li>
-    <nav-item (click)="planetObservable = 'titan'" [text]="'TITAN'"></nav-item>
+    <nav-item (click)="planetObservable = 'titan'" [router]="'titan'" [text]="'TITAN'"></nav-item>
   </li>
 </ul>

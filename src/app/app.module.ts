@@ -26,8 +26,6 @@ import { MoleculesModule } from './components/molecules/molecules.module';
 import { OrganismsModule } from './components/organisms/organisms.module';
 import { TemplatesModule } from './components/templates/templates.module';
 
-import { ObservableNavService } from './observable-nav.service';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +56,7 @@ import { ObservableNavService } from './observable-nav.service';
 
     AppRoutingModule,
   ],
-  providers: [ObservableNavService],
+  providers: [],
   bootstrap: [AppComponent],
   exports: [
     // NavItemComponent,

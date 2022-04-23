@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./nav-item.component.scss']
 })
 export class NavItemComponent implements OnInit {
-  @Input() router: string = '#'
+  @Input() router: string = ''
   @Input() text: string = ''
   @Input() number: string = ''
 

@@ -10,6 +10,7 @@ import { PresentationPlanetComponent } from './presentation-planet/presentation-
 import { NavPlanetComponent } from './nav-planet/nav-planet.component';
 import { PresentationCrewComponent } from './presentation-crew/presentation-crew.component';
 import { NavCrewComponent } from './nav-crew/nav-crew.component';
+import { MoleculesRoutingModule } from './molecules-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NavCrewComponent } from './nav-crew/nav-crew.component';
   imports: [
     CommonModule, 
     AtomsModule,
-    RouterModule
+    MoleculesRoutingModule,
+    RouterModule,
   ],
   exports: [
     NavBarComponent,
