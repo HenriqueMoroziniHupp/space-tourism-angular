@@ -1,6 +1,6 @@
 {
-  "name": "turismo-no-espaco",
-  "version": "0.0.0",
+  "name": "space-tourism",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
