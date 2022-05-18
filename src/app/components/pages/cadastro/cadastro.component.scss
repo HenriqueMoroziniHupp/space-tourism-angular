@@ -1,0 +1,38 @@
+.content {
+  display: grid;
+  margin-top: 2rem;
+  padding: 2rem;
+  grid-template-columns: 400px;
+  // grid-auto-flow: row;
+  place-items: center;
+
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  .form {
+    display: grid;
+    gap: 2rem;
+    // grid-auto-flow: row;
+
+    .form-content {
+      display: grid;
+      grid-auto-flow: row;
+
+      .has-error {
+        border-color: tomato;
+        background-color: pink;
+      }
+    }
+  }
+
+  input {
+    outline: none;
+  }
+
+  small {
+    color: tomato;
+    background-color: pink;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+  }
+}

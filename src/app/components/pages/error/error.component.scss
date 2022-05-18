@@ -1,0 +1,25 @@
+
+.error-content {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  
+  a {
+    display: grid;
+    justify-items: center;
+    font-size: 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+
+      .error-type {
+        margin: 0;
+        font-family: "Bellefair", serif;
+        font-size: 150px;
+        font-weight: 400;
+      }
+      
+      .error-info {
+        font-size: 1.5rem;
+      }
+  }
+}

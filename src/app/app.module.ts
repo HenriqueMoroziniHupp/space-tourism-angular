@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,10 +26,15 @@ import { AtomsModule } from './components/atoms/atoms.module';
 import { MoleculesModule } from './components/molecules/molecules.module';
 import { OrganismsModule } from './components/organisms/organisms.module';
 import { TemplatesModule } from './components/templates/templates.module';
+import { ErrorComponent } from './components/pages/error/error.component';
+// import { CadastroComponent } from './components/pages/cadastro/cadastro.component';
+import { CadastroModule } from './components/pages/cadastro/cadastro.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ErrorComponent,
+    // CadastroComponent,
     // NavItemComponent,
     // InfoPageComponent,
 
@@ -48,13 +54,16 @@ import { TemplatesModule } from './components/templates/templates.module';
     // DesktopTemplateComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AtomsModule,
     MoleculesModule,
     OrganismsModule,
     TemplatesModule,
+    CadastroModule,
 
     AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

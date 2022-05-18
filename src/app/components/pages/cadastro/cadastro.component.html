@@ -1,0 +1,65 @@
+<div class="content">
+
+  <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-content name">
+      <label class="label-name" for="name">Name</label>
+      <!-- <br> -->
+      <input [ngClass]="activeErrorStyle('name')" class="input-name" id="name" type="text" formControlName="name"
+        placeholder="Name">
+      <small *ngIf="isValidTouched('name')">Campo Invalido</small>
+    </div>
+
+    <div class="form-content mail">
+      <label class="label-mail" for="mail">Mail</label>
+      <!-- <br> -->
+      <input [ngClass]="activeErrorStyle('mail')" class="input-mail" id="mail" type="text" formControlName="mail"
+        placeholder="Mail">
+      <small *ngIf="isValidTouched('mail')">Campo Invalido</small>
+    </div>
+
+    <div class="form-content destination">
+      <label class="label-destination" for="destination">Destino</label>
+      <!-- <br> -->
+      <select [ngClass]="activeErrorStyle('destination')" class="select-destination" id="destination" formControlName="destination"
+        placeholder="Mail">
+      <option  *ngFor="let destination of destinations" [value]="destination.name">{{destination.name}}</option>
+    </select>
+      <small *ngIf="isValidTouched('mail')">Campo Invalido</small>
+    </div>
+
+    <div class="form-group-endereco" formGroupName="endereco">
+
+      <div class="form-content cep">
+        <label class="label-cep" for="cep">CEP</label>
+        <input [ngClass]="activeErrorStyle('endereco.cep')" (blur)="consultaCEP()" class="input-cep" id="cep"
+          type="text" formControlName="cep" placeholder="CEP">
+        <small *ngIf="isValidTouched('endereco.cep')">Campo Invalido</small>
+      </div>
+
+      <div class="form-content uf">
+        <label class="label-uf" for="uf">Estado</label>
+        <input [ngClass]="activeErrorStyle('endereco.UF')" class="input-uf" id="uf" type="text" formControlName="UF"
+          placeholder="Estado">
+        <small *ngIf="isValidTouched('endereco.UF')">Campo Invalido</small>
+      </div>
+
+      <div class="form-content cidade">
+        <label class="label-cidade" for="cidade">Cidade</label>
+        <input [ngClass]="activeErrorStyle('endereco.cidade')" class="input-cep" id="cidade" type="text"
+          formControlName="cidade" placeholder="Cidade">
+        <small *ngIf="isValidTouched('endereco.cidade')">Campo Invalido</small>
+      </div>
+
+    </div>
+
+
+    <button type="submit"  >Submit</button>
+    <button type="submit" (click)="onReset()">Clear</button>
+  </form>
+
+
+
+
+  <!-- <app-debug-cadastro [form]="form"></app-debug-cadastro> -->
+
+</div>
